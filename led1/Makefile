@@ -74,5 +74,5 @@ obj-$(CONFIG_MINI210_BUZZER)	+= mini210_pwm.o
 obj-$(CONFIG_MINI210_ADC)		+= mini210_adc.o
 obj-$(CONFIG_MINI210_BACKLIGHT)	+= mini210_backlight.o
 
-obj-$(CONFIG_HW)	+= helloworld_driver.o
+obj-$(CONFIG_HELLO_WORLD)	+= helloworld_driver.o
 obj-$(CONFIG_LED1)	+= led1_driver.o
