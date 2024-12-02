@@ -47,6 +47,8 @@ cd ..
 cd /mnt
 cd nfs
 ./helloworld_user
+rm /dev/helloworld
+rmmod helloworld_driver
 
 Final output:
 Device helloworld char driver opened.
