@@ -40,17 +40,17 @@ cd nfs
 ls(should be 3 files)
 cd linux-3.0.8/
 cd drivers/
-cd char
-### insmod helloworld_driver.ko
-cd /proc
-### mknod /dev/helloworld c 250 1
+cd char #Navigates to the char directory where the compiled driver module (helloworld_driver.ko) is located.
+### insmod helloworld_driver.ko Inserts (loads) the helloworld_driver kernel module into the kernel.
+cd /proc ### Enters the /proc directory, which contains runtime kernel information.
+### mknod /dev/helloworld c 250 1 #Creates a device file /dev/helloworld with
 cd ..
 cd ..
 cd /mnt
 cd nfs
-./helloworld_user
-rm /dev/helloworld
-rmmod helloworld_driver
+./helloworld_user #Executes the user-space program, which interacts with the device driver and outputs messages.
+rm /dev/helloworld Removes the device file created earlier.
+rmmod helloworld_driver Removes (unloads) the helloworld_driver module from the kernel.
 
 Final output:
 Device helloworld char driver opened.
